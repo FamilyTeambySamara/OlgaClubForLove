@@ -1,0 +1,54 @@
+/* =================== Стили для навигации ================= */
+body {
+  background-color: white;
+}
+#hiddenMenu {
+  background-color: #55194E;
+}
+#hiddenMenu a {
+  color: white;
+}
+.navbar-toggle {
+  background-color: #40173D;
+  border: 1px solid white;
+}
+.icon-bar {
+  background-color: white;
+}
+.navbar-header {
+  background-color: #40173D;
+}
+
+#navMenu {
+  border: none;
+}
+
+/*Стили для footer*/
+#footerClub {
+  background-color: #40173D;
+}
+#footerClub a{
+  color: white;
+}
+.form-control {
+  margin-bottom: 15px;
+}
+#InfoFooter {
+  margin-top: 15px;
+}
+#footerClub1 {
+  color: white;
+  background-color: #55194E;
+}
+#footerClub1 a{
+  color: white;
+}
+#hiddenMenu li:hover {
+  background-color: #240D22;
+}
+#footerList li:hover {
+  background-color: none;
+}
+.fa-heart, h4, .colorFa {
+  color: #A13A99;
+}
