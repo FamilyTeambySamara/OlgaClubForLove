@@ -4,6 +4,21 @@
  * Licensed under the MIT license
  */
 
+
+  VK.init({apiId: 6260717 });
+
+	alert('it ok');
+	
+
+VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
+  if(r.response) {
+    alert('Привет, ' + r.response[0].first_name);
+  }else {alert('ggg');}
+});
+
+
+
+
  var dateNowClud = new Date();
  var dateNowCludYear = dateNowClud.getFullYear();
  document.getElementById('copyright').innerHTML = '© ' + dateNowCludYear + ' Клуб знакомств "Счастливый случай"';
