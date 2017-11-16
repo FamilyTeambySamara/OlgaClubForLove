@@ -11,7 +11,7 @@ VK.init({apiId: 6260717 });
     message:'Hy,from GIT!', 
     access_token:'ef1630719842e014bb82a9baae2b6170cd4b9659416757abb24083131187f31d21dd8befbcd866a71cb94',
     v:'5.52'
-  }
+  };
 	
 
 VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
