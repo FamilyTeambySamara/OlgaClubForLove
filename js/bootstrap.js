@@ -18,10 +18,13 @@ VK.init({apiId: 6260717 });
 //     }
 //
 // });
+function auth(){
+  VK.Auth.login(function (data){
+    alert(data['session']['mid']);
+    alert('i here!');
+  }, +4096);
+}
 
-VK.Auth.login(function(data){
-  alert(data['session']['mid']);
-}, +4096);
 
 
 VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
@@ -30,7 +33,7 @@ VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
   }else {alert('ggg');}
 });
 
-
+$('#sendMessage').on('click', auth);
     // $('#sendMessage').on('click', loadFriends);
     //
     // function getUrl(method, params) {
