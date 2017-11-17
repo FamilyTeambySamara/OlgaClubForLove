@@ -11,7 +11,9 @@ VK.Api.call('messages.send', {user_id: 11971008, random_id: 1197100812312312312,
 	message: 'Hy,from GIT!',
 	access_token:'3d925e55073647ca095dcd714bf0fe71b76dd1a45b2f5f3c00fafe82ac2afc6e21959816ce84b1ec361ab',
 }, function(r){
-  alert(r);
+  for (a in r){
+    alert (a);
+  }
 });
 
 
