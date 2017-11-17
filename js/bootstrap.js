@@ -2,6 +2,7 @@
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the MIT license
+   access_token:'58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7',
  */
 
 
@@ -11,17 +12,27 @@ VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
 
 VK.Widgets.CommunityMessages("vk_community_messages", 146880406, {expandTimeout: "2000",tooltipButtonText: "Есть вопрос?"});
 
+function sendMessageToGroup(){
 
-// VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
-// 	message: 'Hy,from GIT!',
-// 	access_token:'58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7',
-// }, function(r){
-//     var obj = r['error'];
-//     for (prop in obj)
-//     {alert(prop + '=' + obj[prop]);
-//     }
-//
-// });
+  VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
+    message: 'Hy,from GIT!',
+
+  }, function(r){
+    if (r.response){
+      alert('Go on!');
+    }else{
+      var obj = r['error'];
+      for (prop in obj){
+        alert(prop + '=' + obj[prop]);
+      }
+    }
+
+
+  });
+}
+
+
+
 function auth(){
   VK.Auth.login(function (data){
     alert(data['session']['mid']);
