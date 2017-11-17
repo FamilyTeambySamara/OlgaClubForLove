@@ -67,3 +67,7 @@ height: 200px;}
 #mailUser, #phoneUser, #vkUser {
   display: none;
 }
+#vk_community_messages, #vk_contact_us {
+  width: 200px;
+  height: 300px;
+}
