@@ -9,7 +9,7 @@ VK.init({apiId: 6260717});
 
 VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
 
-VK.Widgets.CommunityMessages("vk_community_messages", 146880406, {expandTimeout: "5000",tooltipButtonText: "Есть вопрос?"});
+VK.Widgets.CommunityMessages("vk_community_messages", 146880406, {expandTimeout: "2000",tooltipButtonText: "Есть вопрос?"});
 
 
 // VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
