@@ -43,4 +43,4 @@ function ChooseUsers() {
 
 var phone = new ChooseUsers();
 var mail = new ChooseUsers();
-var vk = new ChooseUsers();
+var Koontact = new ChooseUsers();
