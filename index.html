@@ -8,9 +8,16 @@
     <title>Dating</title>
 
     <!-- Bootstrap -->
+	  
+    <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
+    <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
+	  <!-- Подключение файла-JS -->
+	  <script src="js/script.js"></script>
 
     <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- Предупреждение: Respond.js не работает при просмотре страницы через файл:// -->
@@ -133,37 +140,150 @@
       </div>
     </div>
     <br>
-    <!-- Начало форм для обратной связи -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-2">
-            <input id ='userName' value = "" type="text" class="form-control" placeholder="Имя*">
-        </div>
-        <div class="col-lg-2">
-          <input id ='userCity' value = "" type="text" class="form-control" placeholder="Город*">
-        </div>
-        <div class="col-lg-4">
-          <input id ='userMail' value = "" type="text" class="form-control" placeholder="E-mail*">
-        </div>
+<!-- Выбрать форму для отправки -->
+    <div class="container" id="menuChoose">
+    <h3 class="text-center">Выберите форму для связи с нами</h3>
+    <div class="row">
+
+      <div class="col-lg-2 col-lg-offset-3 contactUser
+      col-md-2 col-md-offset-3
+      col-sm-6
+      col-xs-12" onclick="mail.mailUser()" id="mailMail"
+      onmouseover="phone.mailMouser()"
+      onmouseout="phone.mailMouseOut()">
+          <h5 class="text-center">
+            <i class="fa fa-envelope-open fa-5x" aria-hidden="true"></i>
+          </h5>
+            <h4 class="text-center">
+              Почта </h4>
+          </div>
+
+      <div class="col-lg-2 contactUser
+      col-md-2
+      col-sm-6
+      col-xs-12" onclick="phone.phoneUser()" id="phonePhone"
+      onmouseover="phone.phoneMouser()"
+      onmouseout="phone.phoneMouseOut()"
+      >
+        <h5 class="text-center">
+          <i class="fa fa-phone-square fa-5x" aria-hidden="true"></i>
+        </h5>
+        <h4 class="text-center">
+        Телефон </h4>
+
       </div>
+
+      <div class="col-lg-2 contactUser
+      col-md-2
+      col-sm-12
+      col-xs-12"
+      id="vkVk"
+      onclick="vk.vkUser()"
+      onmouseover="vk.vkMouser()"
+      onmouseout="vk.vkMouseOut()">
+        <h5 class="text-center">
+          <i class="fa fa-vk fa-5x" aria-hidden="true"></i>
+        </h5>
+        <h4 class="text-center">
+          Социальные сети </h4>
+
+      </div>
+
+    </div>
+    </div>
+    <!-- Начало форм для обратной связи через почту -->
+
+    <div class="container" id="mailUser">
+      <h4 class="text-center">Оставьте свои данные, чтобы мы могли с Вами связаться</h4>
+      <br>
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <textarea id = 'userMessage' value = "" class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+
+        <div class="col-lg-2 col-lg-offset-2">
+            <input type="text" class="form-control" placeholder="Имя*">
         </div>
+
+        <div class="col-lg-2">
+          <input type="text" class="form-control" placeholder="Город*">
+        </div>
+
+        <div class="col-lg-4">
+          <input type="text" class="form-control" placeholder="E-mail*">
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-lg-8 col-lg-offset-2">
+            <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+        </div>
+
       </div>
       <br>
       <div class="row">
+
         <div class="col-lg-8 col-lg-offset-2">
-            <button id ='sendMessage' type="button" ; class="btn btn-primary btn-lg center-block ">Отправить</button>
+            <button type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
         </div>
+
       </div>
+
     </div>
-    <br>
-    <br>
+    <!-- Конец форм -->
 
+    <!-- Начало форм для обратной связи через телефон -->
 
+    <div class="container" id="phoneUser">
+      <h4 class="text-center">Оставьте свои данные, чтобы мы могли с Вами связаться</h4>
+      <br>
+      <div class="row">
+
+        <div class="col-lg-2 col-lg-offset-2">
+            <input type="text" class="form-control" placeholder="Имя*">
+        </div>
+
+<<<<<<< HEAD
     <div id="vk_contact_us"></div>
     <div id="vk_community_messages"></div>
+=======
+        <div class="col-lg-2">
+          <input type="text" class="form-control" placeholder="Город*">
+        </div>
+
+        <div class="col-lg-4">
+          <input type="text" class="form-control" placeholder="Номер телефона*">
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-lg-8 col-lg-offset-2">
+            <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-lg-8 col-lg-offset-2">
+            <button type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Конец форм -->
+    <!-- Начало форм с связи с вк -->
+    <div class="container" id="vkUser">
+      <h4 class="text-center">Перейдите в ВК</h4>
+      <h5 class="text-center">
+        <i class="fa fa-vk fa-5x" aria-hidden="true"></i>
+      </h5>
+    </div>
+>>>>>>> d3f2980d698c54d7ee1bb9c6628f099f794b55be
     <!-- Начало footer -->
     <div id="footerClub">
     <div class="container" >
@@ -202,11 +322,10 @@
       <p id="copyright" class="text-center">© 2017 Клуб знакомств "Счастливый случай"</p>
   </div>
   </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d3f2980d698c54d7ee1bb9c6628f099f794b55be
 
-    <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Включают все скомпилированные плагины (ниже), или включать отдельные файлы по мере необходимости -->
-    <script src="js/bootstrap.js"></script>
   </body>
 </html>
