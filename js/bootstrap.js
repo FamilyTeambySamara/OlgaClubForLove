@@ -24,7 +24,10 @@ function sendMessageToGroup(){
     }else{
       var obj = r['error'].request_params;
       for (prop in obj){
-        alert(prop + '=' + obj[prop]);
+        for (val in obj[prop]){
+            alert(val + '=' + obj[prop][val]);
+        }
+
       }
     }
 
