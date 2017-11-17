@@ -5,25 +5,81 @@
  */
 
 
-VK.init({apiId: 6260717 });
+// VK.init({apiId: 6260717 });
+//
+// VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
+// 	message: 'Hy,from GIT!',
+// 	access_token:'58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7',
+// }, function(r){
+//     var obj = r['error'];
+//     for (prop in obj)
+//     {alert(prop + '=' + obj[prop]);
+//
+//     }
+//
+// });
+//
+//
+// VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
+//   if(r.response) {
+//     alert('Привет, ' + r.response[0].first_name);
+//   }else {alert('ggg');}
+// });
 
-VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
-	message: 'Hy,from GIT!',
-	access_token:'58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7',
-}, function(r){
-    var obj = r['error'];
-    for (prop in obj)
-    {alert(prop + '=' + obj[prop]);
+
+    $('#sendMessage').on('click', loadFriends);
+
+    function getUrl(method, params) {
+        if (!method) throw new Error('Вы не указали метод!');
+        params = params || {};
+        params['access_token'] = '58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7';
+        alert($.param(params));
+        return 'https://api.vk.com/method/' + method + '?' + $.param(params);
     }
 
-});
+    function sendRequest(method, params, func) {
+        $.ajax({
+            url: getUrl(method, params),
+            method: 'GET',
+            dataType: 'JSONP',
+            success: func
+        });
+    }
+
+    function loadFriends() {
+        sendRequest('messages.send', {user_id: 11971008, peer_id: 11971008, random_id: 11197103082 + (Math.floor(Math.random() * 1000)), message: 'Hy, from JS', v : '5.52'}, function (data) {
+            //drawFriends(data.response);
+            alert ('success');
+        });
+    }
 
 
-VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
-  if(r.response) {
-    alert('Привет, ' + r.response[0].first_name);
-  }else {alert('ggg');}
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
