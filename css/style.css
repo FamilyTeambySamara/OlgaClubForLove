@@ -54,3 +54,16 @@ body {
 }
 #map {
 height: 200px;}
+
+/*Стили для форм*/
+.form-control {
+  margin-bottom: 15px;
+}
+
+.contactUser {
+  margin-bottom: 15px;
+}
+
+#mailUser, #phoneUser, #vkUser {
+  display: none;
+}
