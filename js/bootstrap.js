@@ -13,7 +13,7 @@ VK.Api.call('messages.send', {user_id: 11971008, random_id: 1197100812312312312,
 }, function(r){
     var obj = r['error'];
     for (prop in obj)
-    {alert(obj[prop]);
+    {alert('prop =' + obj[prop]);
     }
 
 });
