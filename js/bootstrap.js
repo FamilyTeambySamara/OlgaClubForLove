@@ -16,7 +16,7 @@ function sendMessageToGroup(){
 
   VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
     message: 'Hy,from GIT!',
-    access_token:"58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7",
+    access_token:"a969077697e245c00a6ff7019ada3dabc974d4d9218e8ba57fc663a7e2edcf2da226992050e9e4d2fa6a1",
 
   }, function(r){
     if (r.response){
