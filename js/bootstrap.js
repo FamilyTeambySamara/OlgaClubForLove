@@ -5,7 +5,7 @@
  */
 
 
-VK.init({apiId: 6260717 });
+VK.init({apiId: 6260717});
 
 VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
 
