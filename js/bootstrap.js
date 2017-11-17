@@ -9,7 +9,7 @@ VK.init({apiId: 6260717 });
 
 alert(VK.Api.call('messages.send', {user_id: 11971008, random_id: 11971008123123123, peer_id:11971008,
 	message: 'Hy,from GIT!',
-	access_token:'ef1630719842e014bb82a9baae2b6170cd4b9659416757abb24083131187f31d21dd8befbcd866a71cb94',
+	access_token:'3d925e55073647ca095dcd714bf0fe71b76dd1a45b2f5f3c00fafe82ac2afc6e21959816ce84b1ec361ab',
 }, function(r){
   alert(r);
 }));
