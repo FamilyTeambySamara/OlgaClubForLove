@@ -5,6 +5,44 @@
    access_token:'58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7',
  */
 
+//Vika Designed
+$(document).ready(function() {
+
+    $("#back-top").hide();
+
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('#back-top').fadeIn();
+            } else {
+                $('#back-top').fadeOut();
+            }
+        });
+
+        $('#back-top a').click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        $(".arrow").find("span").hide().end().hover(function() {
+            $(this).find("span").stop(true, true).fadeIn();
+        }, function() {
+            $(this).find("span").stop(true, true).fadeOut();
+        });
+
+    });
+
+});
+
+
+
+
+
+
+
+
 
 VK.init({apiId: 6260717});
 
