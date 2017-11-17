@@ -22,7 +22,7 @@ function sendMessageToGroup(){
     if (r.response){
       alert('Go on!');
     }else{
-      var obj = r['error'];
+      var obj = r['error'].request_params;
       for (prop in obj){
         alert(prop + '=' + obj[prop]);
       }
