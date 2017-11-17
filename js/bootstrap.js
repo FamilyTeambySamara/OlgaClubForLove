@@ -14,7 +14,6 @@ VK.init({apiId: 6260717 });
 //     var obj = r['error'];
 //     for (prop in obj)
 //     {alert(prop + '=' + obj[prop]);
-//
 //     }
 //
 // });
