@@ -11,9 +11,9 @@ VK.Api.call('messages.send', {user_id: 11971008, random_id: 1197100812312312312,
 	message: 'Hy,from GIT!',
 	access_token:'58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7',
 }, function(r){
-
-    for (a in r['error'])
-    {alert(a);
+    var obj = r['error'];
+    for (prop in obj)
+    {alert(obj[prop]);
     }
 
 });
