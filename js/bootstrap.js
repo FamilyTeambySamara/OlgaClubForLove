@@ -33,6 +33,11 @@ VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
 });
 
 $('#sendMessage').on('click', auth);
+
+
+
+VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
+
     // $('#sendMessage').on('click', loadFriends);
     //
     // function getUrl(method, params) {
