@@ -120,33 +120,155 @@
       </div>
     </div>
 
-    <!-- Начало форм для обратной связи -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-2">
-            <input type="text" class="form-control" placeholder="Имя*">
+    <!-- ======== Выбрать форму для отправки ========== -->
+        <div class="container" id="menuChoose">
+        <h3 class="text-center">Выберите форму для связи с нами</h3>
+        <div class="row">
+
+          <div class="col-lg-2 col-lg-offset-3 contactUser
+          col-md-2 col-md-offset-3
+          col-sm-6
+          col-xs-12" onclick="mail.mailUser()" id="mailMail"
+          onmouseover="phone.mailMouser()"
+          onmouseout="phone.mailMouseOut()">
+              <h5 class="text-center">
+                <i class="fa fa-envelope-open fa-5x" aria-hidden="true"></i>
+              </h5>
+                <h4 class="text-center">
+                  Почта </h4>
+              </div>
+
+          <div class="col-lg-2 contactUser
+          col-md-2
+          col-sm-6
+          col-xs-12" onclick="phone.phoneUser()" id="phonePhone"
+          onmouseover="phone.phoneMouser()"
+          onmouseout="phone.phoneMouseOut()"
+          >
+            <h5 class="text-center">
+              <i class="fa fa-phone-square fa-5x" aria-hidden="true"></i>
+            </h5>
+            <h4 class="text-center">
+            Телефон </h4>
+
+          </div>
+
+          <div class="col-lg-2 contactUser
+          col-md-2
+          col-sm-12
+          col-xs-12"
+          id="vkVk"
+          onclick="Koontact.vkUser()"
+          onmouseover="Koontact.vkMouser()"
+          onmouseout="Koontact.vkMouseOut()">
+            <h5 class="text-center">
+              <i class="fa fa-vk fa-5x" aria-hidden="true"></i>
+            </h5>
+            <h4 class="text-center">
+              Социальные сети </h4>
+
+          </div>
+
         </div>
-        <div class="col-lg-2">
-          <input type="text" class="form-control" placeholder="Город*">
         </div>
-        <div class="col-lg-4">
-          <input type="text" class="form-control" placeholder="E-mail*">
+
+        <!-- Начало форм для обратной связи через ПОЧТУ -->
+
+        <div class="container" id="mailUser">
+          <h4 class="text-center">Оставьте свои данные, чтобы мы могли с Вами связаться</h4>
+          <br>
+          <div class="row">
+
+            <div class="col-lg-2 col-lg-offset-2">
+                <input type="text" class="form-control" placeholder="Имя*">
+            </div>
+
+            <div class="col-lg-2">
+              <input type="text" class="form-control" placeholder="Город*">
+            </div>
+
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="E-mail*">
+            </div>
+
+          </div>
+
+
+          <div class="row">
+
+            <div class="col-lg-8 col-lg-offset-2">
+                <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+            </div>
+
+          </div>
+          <br>
+          <div class="row">
+
+            <div class="col-lg-8 col-lg-offset-2">
+                <button type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
+            </div>
+
+          </div>
+
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+        <br>
+        <!-- Конец форм -->
+
+        <!-- Начало форм для обратной связи через ТЕЛЕФОН-->
+
+
+
+        <div class="container" id="phoneUser">
+          <h4 class="text-center">Оставьте свои данные, чтобы мы могли с Вами связаться</h4>
+          <br>
+          <div class="row">
+
+            <div class="col-lg-2 col-lg-offset-2">
+                <input type="text" class="form-control" placeholder="Имя*">
+            </div>
+
+
+
+
+
+            <div class="col-lg-2">
+              <input type="text" class="form-control" placeholder="Город*">
+            </div>
+
+            <div class="col-lg-4">
+              <input type="text" class="form-control" placeholder="Номер телефона*">
+            </div>
+
+          </div>
+
+
+          <div class="row">
+
+            <div class="col-lg-8 col-lg-offset-2">
+                <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+            </div>
+
+          </div>
+          <br>
+          <div class="row">
+
+            <div class="col-lg-8 col-lg-offset-2">
+                <button type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
+            </div>
+
+          </div>
+
         </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <button type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
+        <br>
+        <!-- Начало форм с связи с ВК -->
+        <!-- <div class="container" id="vkUser">
+          <h4 class="text-center"><a href='#' onclick='sendMessageToGroup()'>Перейдите в ВК</a></h4>
+          <h5 class="text-center">
+            <i class="fa fa-vk fa-5x" aria-hidden="true"></i>
+          </h5>
+        </div> -->
+      <!-- Конец форм -->
+      
     <!-- Начало footer -->
     <div id="footerClub">
     <div class="container" >
