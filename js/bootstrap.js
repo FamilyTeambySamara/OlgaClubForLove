@@ -38,49 +38,43 @@ $(document).ready(function() {
 
 
 
+VK.init({apiId: 6269517});
+
+//VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
+
+VK.Widgets.CommunityMessages("vk_community_messages", -157303041, {expandTimeout: "2000",tooltipButtonText: "Есть вопрос?"});
+
+// function sendMessageToGroup(){
+//
+//   VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
+//     message: 'Hy,from GIT!',
+//     access_token:"a969077697e245c00a6ff7019ada3dabc974d4d9218e8ba57fc663a7e2edcf2da226992050e9e4d2fa6a1",
+//
+//   }, function(r){
+//     if (r.response){
+//       alert('Go on!');
+//     }else{
+//       var obj = r['error'].request_params;
+//       for (prop in obj){
+//         for (val in obj[prop]){
+//             alert(val + '=' + obj[prop][val]);
+//         }
+//
+//       }
+//     }
+//
+//
+//   });
+// }
 
 
 
-
-
-
-VK.init({apiId: 6260717});
-
-VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
-
-VK.Widgets.CommunityMessages("vk_community_messages", 146880406, {expandTimeout: "2000",tooltipButtonText: "Есть вопрос?"});
-
-function sendMessageToGroup(){
-
-  VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
-    message: 'Hy,from GIT!',
-    access_token:"a969077697e245c00a6ff7019ada3dabc974d4d9218e8ba57fc663a7e2edcf2da226992050e9e4d2fa6a1",
-
-  }, function(r){
-    if (r.response){
-      alert('Go on!');
-    }else{
-      var obj = r['error'].request_params;
-      for (prop in obj){
-        for (val in obj[prop]){
-            alert(val + '=' + obj[prop][val]);
-        }
-
-      }
-    }
-
-
-  });
-}
-
-
-
-function auth(){
-  VK.Auth.login(function (data){
-    alert(data['session']['mid']);
-    alert('i here!');
-  }, +4096);
-}
+// function auth(){
+//   VK.Auth.login(function (data){
+//     alert(data['session']['mid']);
+//     alert('i here!');
+//   }, +4096);
+// }
 
 
 
@@ -90,72 +84,43 @@ VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
   }else {alert('ggg');}
 });
 
-$('#sendMessage').on('click', auth);
+// $('#sendMessage').on('click', auth);
 
 
 
 
 
-    // $('#sendMessage').on('click', loadFriends);
-    //
-    // function getUrl(method, params) {
-    //     if (!method) throw new Error('Вы не указали метод!');
-    //     params = params || {};
-    //     params['access_token'] = '58ba519d3727dccef2ac0011f040852b805cf60b21cc8bf65e16b44e0eec74a08f0adcc576fecb5b8c7c7';
-    //     alert($.param(params));
-    //     return 'https://api.vk.com/method/' + method + '?' + $.param(params);
-    // }
-    //
-    // function sendRequest(method, params, func) {
-    //     $.ajax({
-    //         url: getUrl(method, params),
-    //         method: 'GET',
-    //         dataType: 'JSONP',
-    //         success: func
-    //     });
-    // }
-    //
-    // function loadFriends() {
-    //     sendRequest('messages.send', {user_id: 51532049, peer_id: 51532049,
-    //       random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
-    //        message: 'Имя:' + document.getElementById('userName').value
-    //        + ' ,город:' + document.getElementById('userCity').value
-    //        + ' ,eMail:' + document.getElementById('userMail').value
-    //        + ' , сообщение: ' + document.getElementById('userMessage').value,
-    //        v : '5.52'},
-    //        function (data) {
-    //         //drawFriends(data.response);
-    //         alert (document.getElementById('userName').value);
-    //     });
-    // }
+    $('#sendMessage').on('click', SendMessage);
 
+    function getUrl(method, params) {
+        if (!method) throw new Error('Вы не указали метод!');
+        params = params || {};
+        params['access_token'] = '12e2722b12e2722b12e2722be512bdd866112e212e2722b48f7f4efcb78aeef765aaa76';
+        alert($.param(params));
+        return 'https://api.vk.com/method/' + method + '?' + $.param(params);
+    }
 
+    function sendRequest(method, params, func) {
+        $.ajax({
+            url: getUrl(method, params),
+            method: 'GET',
+            dataType: 'JSONP',
+            success: func
+        });
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function SendMessage() {
+        sendRequest('messages.send', {user_id: 51532049, peer_id: 51532049,
+          random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
+           message: 'Имя:' + document.getElementById('userName').value
+           + ' ,город:' + document.getElementById('userCity').value
+           + ' ,eMail:' + document.getElementById('userMail').value
+           + ' , сообщение: ' + document.getElementById('userMessage').value,
+           v : '5.52'},
+           function (data) {
+            alert (document.getElementById('userName').value);
+        });
+    }
 
 
 
