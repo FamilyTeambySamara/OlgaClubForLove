@@ -67,5 +67,31 @@ function vkFunction() {
 
 
 function validatePost() {
-  var nameUser = document.getElementById('').value;
+  var nameUser = document.getElementById('userName').value;
+  var cityUser = document.getElementById('userCity').value;
+  var postUser = document.getElementById('userMail').value;
+  var messageUser = document.getElementById('userMessage').value;
+
+    if ( /\w/.test('nameUser') = true && /\w/.test('cityUser') = true &&
+    /\w/.test('postUser') = true && /\w/.test('messageUser') = true ) {
+      sendMessagePost();
+    }
+
+    if (/\w/.test('nameUser') = false) {
+      document.getElementById('userName').style.border= '1px solid red';
+    }
+
+    if (/\w/.test('cityUser') = false) {
+      do
+    }
+
+    if (/\w/.test('postUser') = false) {
+      do
+    }
+
+    if (/\w/.test('messageUser') = false) {
+      do
+    }
+
+
 }
