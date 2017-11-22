@@ -135,7 +135,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
           // sendMessagePost();
         } else {
             document.getElementById('ErrorsUser').style.display= 'block';
-            document.getElementById('ErrorsUser').innerHTML= '<h2 class="text-danger">Заполните корректно все поля</h2>';
+            document.getElementById('ErrorsUser').innerHTML= '<h2 class="text-danger">Поля заполнены некорректно</h2>';
           }
 
         if (/[\w\W]/.test(nameUser) == false) {
