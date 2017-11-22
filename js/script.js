@@ -64,3 +64,8 @@ function vkFunction() {
   Koontact.mailMouseOut();
   Koontact.phoneMouseOut();
 }
+
+
+function validatePost() {
+  var nameUser = document.getElementById('').value;
+}
