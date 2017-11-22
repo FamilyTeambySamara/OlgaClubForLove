@@ -140,15 +140,15 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
         }
 
         if (/\w/.test(cityUser) == false) {
-          document.getElementById('userName').style.border= '1px solid red';
+          document.getElementById('userCity').style.border= '1px solid red';
         }
 
         if (/\w/.test(postUser) == false) {
-          document.getElementById('userName').style.border= '1px solid red';
+          document.getElementById('userMail').style.border= '1px solid red';
         }
 
         if (/\w/.test(messageUser) == false) {
-          document.getElementById('userName').style.border= '1px solid red';
+          document.getElementById('userMessage').style.border= '1px solid red';
         }
 
 
