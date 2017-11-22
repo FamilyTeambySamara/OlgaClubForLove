@@ -16,6 +16,7 @@
         'v' => '5.52'
 
     );
+    
     $get_params = http_build_query($request_params);
     $result = json_decode(file_get_contents('https://api.vk.com/method/messages.send?'. $get_params));
 
