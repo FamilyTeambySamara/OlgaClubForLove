@@ -37,12 +37,13 @@ $(document).ready(function() {
 });
 
 
+///////////////////////=========================================\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 VK.init({apiId: 6269517});
 
 //VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
 
-VK.Widgets.CommunityMessages("vk_community_messages", -157303041, {expandTimeout: "2000",tooltipButtonText: "Есть вопрос?"});
+VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout: "2000",tooltipButtonText: "Есть вопрос?"});
 
 // function sendMessageToGroup(){
 //
