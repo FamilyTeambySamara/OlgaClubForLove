@@ -128,12 +128,12 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
       var postUser = document.getElementById('userMail').value;
       var messageUser = document.getElementById('userMessage').value;
 
-        if ( /\w/.test(nameUser) = true && /\w/.test(cityUser) = true &&
-        /\w/.test(postUser) = true && /\w/.test(messageUser) = true ) {
-          sendMessagePost();
-        } else {
-            document.getElementById('ErrorsUser').style.display= 'block';
-          }
+        // if ( /\w/.test(nameUser) = true && /\w/.test(cityUser) = true &&
+        // /\w/.test(postUser) = true && /\w/.test(messageUser) = true ) {
+        //   sendMessagePost();
+        // } else {
+        //     document.getElementById('ErrorsUser').style.display= 'block';
+        //   }
 
         if (/\w/.test(nameUser) = false) {
           document.getElementById('userName').style.border= '1px solid red';
