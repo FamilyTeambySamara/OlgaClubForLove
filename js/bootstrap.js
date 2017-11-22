@@ -79,7 +79,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 
 
 
-VK.Api.call('users.get', {user_ids: 11971008, access_token: '12e2722b12e2722b12e2722be512bdd866112e212e2722b48f7f4efcb78aeef765aaa76'}, function(r) {
+VK.Api.call('users.get', {user_ids: 11971008, access_token: '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031'}, function(r) {
   if(r.response) {
     alert('Привет, ' + r.response[0].first_name);
   }else {alert('ggg');}
@@ -88,16 +88,13 @@ VK.Api.call('users.get', {user_ids: 11971008, access_token: '12e2722b12e2722b12e
 // $('#sendMessage').on('click', auth);
 
 
-
-
-
     $('#sendMessage').on('click', SendMessage);
 
     function getUrl(method, params) {
         if (!method) throw new Error('Вы не указали метод!');
         params = params || {};
-        params['access_token'] = '12e2722b12e2722b12e2722be512bdd866112e212e2722b48f7f4efcb78aeef765aaa76';
-        alert($.param(params));
+        params['access_token'] = '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031';
+        //alert($.param(params));
         return 'https://api.vk.com/method/' + method + '?' + $.param(params);
     }
 
