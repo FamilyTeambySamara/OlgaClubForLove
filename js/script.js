@@ -44,3 +44,17 @@ function ChooseUsers() {
 var phone = new ChooseUsers();
 var mail = new ChooseUsers();
 var Koontact = new ChooseUsers();
+
+function mailFunction() {
+  mail.mailUser();
+  mail.mailMouser();
+  mail.phoneMouseOut();
+  mail.vkMouseOut();
+}
+
+function phoneFunction() {
+  phone.phoneUser();
+  phone.phoneMouser();
+  phone.mailMouseOut();
+  phone.vkMouseOut();
+}
