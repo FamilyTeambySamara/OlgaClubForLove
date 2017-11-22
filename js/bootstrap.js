@@ -120,7 +120,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
     //     });
     // }
 
-
+// Функция для клика по кнопке "Отправить"
     function validatePost() {
 
       var nameUser = document.getElementById('userName').value;
@@ -128,26 +128,26 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
       var postUser = document.getElementById('userMail').value;
       var messageUser = document.getElementById('userMessage').value;
 
-        if ( /\w/.test('nameUser') = true && /\w/.test('cityUser') = true &&
-        /\w/.test('postUser') = true && /\w/.test('messageUser') = true ) {
+        if ( /\w/.test(nameUser) = true && /\w/.test(cityUser) = true &&
+        /\w/.test(postUser) = true && /\w/.test(messageUser) = true ) {
           sendMessagePost();
         } else {
             document.getElementById('ErrorsUser').style.display= 'block';
           }
 
-        if (/\w/.test('nameUser') = false) {
+        if (/\w/.test(nameUser) = false) {
           document.getElementById('userName').style.border= '1px solid red';
         }
 
-        if (/\w/.test('cityUser') = false) {
+        if (/\w/.test(cityUser) = false) {
           document.getElementById('userName').style.border= '1px solid red';
         }
 
-        if (/\w/.test('postUser') = false) {
+        if (/\w/.test(postUser) = false) {
           document.getElementById('userName').style.border= '1px solid red';
         }
 
-        if (/\w/.test('messageUser') = false) {
+        if (/\w/.test(messageUser) = false) {
           document.getElementById('userName').style.border= '1px solid red';
         }
 
