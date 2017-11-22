@@ -135,23 +135,29 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
             document.getElementById('ErrorsUser').style.display= 'block';
           }
 
-        if (/\w/.test(nameUser) == false) {
+        if (/[\w\W]/.test(nameUser) == false) {
           document.getElementById('userName').style.border= '1px solid red';
         } else {
             document.getElementById('userName').style.border= '1px solid #CCCCCC';
           }
 
-        if (/\w/.test(cityUser) == false) {
+        if (/[\w\W]/.test(cityUser) == false) {
           document.getElementById('userCity').style.border= '1px solid red';
-        }
+        } else {
+            document.getElementById('userCity').style.border= '1px solid #CCCCCC';
+          }
 
-        if (/\w/.test(postUser) == false) {
+        if (/[\w\W]/.test(postUser) == false) {
           document.getElementById('userMail').style.border= '1px solid red';
-        }
+        } else {
+            document.getElementById('userMail').style.border= '1px solid #CCCCCC';
+          }
 
-        if (/\w/.test(messageUser) == false) {
+        if (/[\w\W]/.test(messageUser) == false) {
           document.getElementById('userMessage').style.border= '1px solid red';
-        }
+        } else {
+            document.getElementById('userMessage').style.border= '1px solid #CCCCCC';
+          }
 
 
     }
