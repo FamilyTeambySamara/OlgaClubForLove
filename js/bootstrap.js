@@ -88,6 +88,46 @@ VK.Api.call('users.get', {user_ids: 329948960, access_token: '30e4b91476b023e1ff
 // $('#sendMessage').on('click', auth);
 
 
+    // $('#sendMessage').on('click', SendMessage);
+    //
+    // function getUrl(method, params) {
+    //     if (!method) throw new Error('Вы не указали метод!');
+    //     params = params || {};
+    //     params['access_token'] = '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031';
+    //     //alert($.param(params));
+    //     return 'https://api.vk.com/method/' + method + '?' + $.param(params);
+    // }
+    //
+    // function sendRequest(method, params, func) {
+    //     $.ajax({
+    //         url: getUrl(method, params),
+    //         method: 'GET',
+    //         dataType: 'JSONP',
+    //         success: func
+    //     });
+    // }
+    //
+    // function SendMessage() {
+    //     sendRequest('messages.send', {user_id: 329948960, peer_id: 329948960,
+    //       random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
+    //        message: 'Имя:' + document.getElementById('userName').value
+    //        + ' ,город:' + document.getElementById('userCity').value
+    //        + ' ,eMail:' + document.getElementById('userMail').value
+    //        + ' , сообщение: ' + document.getElementById('userMessage').value,
+    //        v : '5.52'},
+    //        function (data) {
+    //         alert (document.getElementById('userName').value);
+    //     });
+    // }
+
+
+
+
+
+
+
+
+
     $('#sendMessage').on('click', SendMessage);
 
     function getUrl(method, params) {
@@ -95,7 +135,7 @@ VK.Api.call('users.get', {user_ids: 329948960, access_token: '30e4b91476b023e1ff
         params = params || {};
         params['access_token'] = '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031';
         //alert($.param(params));
-        return 'https://api.vk.com/method/' + method + '?' + $.param(params);
+        return 'https://familyteambysamara.github.io/sendMessage.php/?' + $.param(params);
     }
 
     function sendRequest(method, params, func) {
@@ -119,6 +159,30 @@ VK.Api.call('users.get', {user_ids: 329948960, access_token: '30e4b91476b023e1ff
             alert (document.getElementById('userName').value);
         });
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
