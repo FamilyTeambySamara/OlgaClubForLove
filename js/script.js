@@ -82,15 +82,15 @@ function validatePost() {
     }
 
     if (/\w/.test('cityUser') = false) {
-      do
+      document.getElementById('userName').style.border= '1px solid red';
     }
 
     if (/\w/.test('postUser') = false) {
-      do
+      document.getElementById('userName').style.border= '1px solid red';
     }
 
     if (/\w/.test('messageUser') = false) {
-      do
+      document.getElementById('userName').style.border= '1px solid red';
     }
 
 
