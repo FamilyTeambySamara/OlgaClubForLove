@@ -130,9 +130,12 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 
         if ( /[\w\W]/.test(nameUser) == true && /[\w\W]/.test(cityUser) == true &&
         /[\w\W]/.test(postUser) == true && /[\w\W]/.test(messageUser) == true ) {
+          document.getElementById('ErrorsUser').style.display= 'block';
+          document.getElementById('ErrorsUser').innerHTML= 'Ваше сообщение отправлено!';
           sendMessagePost();
         } else {
             document.getElementById('ErrorsUser').style.display= 'block';
+            document.getElementById('ErrorsUser').innerHTML= 'Заполните корректно все поля';
           }
 
         if (/[\w\W]/.test(nameUser) == false) {
