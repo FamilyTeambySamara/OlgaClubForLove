@@ -3,7 +3,7 @@ function ChooseUsers() {
     this.mailUser = function () {
       document.getElementById('mailUser').style.display = "block";
       document.getElementById('phoneUser').style.display = "none";
-      document.getElementById('vkUser').style.display = "none";
+      // document.getElementById('vkUser').style.display = "none";
     }
     this.mailMouser = function () {
       document.getElementById('mailMail').style.backgroundColor = "#55194E";
@@ -16,7 +16,7 @@ function ChooseUsers() {
     this.phoneUser = function () {
       document.getElementById('phoneUser').style.display = "block";
       document.getElementById('mailUser').style.display = "none";
-      document.getElementById('vkUser').style.display = "none";
+      // document.getElementById('vkUser').style.display = "none";
     }
     this.phoneMouser = function () {
       document.getElementById('phonePhone').style.backgroundColor = "#55194E";
@@ -27,7 +27,7 @@ function ChooseUsers() {
       document.getElementById('phonePhone').style.color = "#333333";
     }
     this.vkUser = function () {
-      document.getElementById('vkUser').style.display = "block";
+      // document.getElementById('vkUser').style.display = "block";
       document.getElementById('mailUser').style.display = "none";
       document.getElementById('phoneUser').style.display = "none";
     }
@@ -57,4 +57,10 @@ function phoneFunction() {
   phone.phoneMouser();
   phone.mailMouseOut();
   phone.vkMouseOut();
+}
+function vkFunction() {
+  Koontact.vkUser();
+  Koontact.vkMouser();
+  Koontact.mailMouseOut();
+  Koontact.phoneMouseOut();
 }
