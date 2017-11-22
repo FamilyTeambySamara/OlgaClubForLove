@@ -79,7 +79,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 
 
 
-VK.Api.call('users.get', {user_ids: 11971008, access_token: '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031'}, function(r) {
+VK.Api.call('users.get', {user_ids: 329948960, access_token: '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031'}, function(r) {
   if(r.response) {
     alert('Привет, ' + r.response[0].first_name);
   }else {alert('ggg');}
@@ -108,7 +108,7 @@ VK.Api.call('users.get', {user_ids: 11971008, access_token: '30e4b91476b023e1ffb
     }
 
     function SendMessage() {
-        sendRequest('messages.send', {user_id: 51532049, peer_id: 51532049,
+        sendRequest('messages.send', {user_id: 329948960, peer_id: 329948960,
           random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
            message: 'Имя:' + document.getElementById('userName').value
            + ' ,город:' + document.getElementById('userCity').value
