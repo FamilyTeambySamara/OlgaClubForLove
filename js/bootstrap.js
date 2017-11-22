@@ -128,8 +128,8 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
       var postUser = document.getElementById('userMail').value;
       var messageUser = document.getElementById('userMessage').value;
 
-        if ( /\w/.test(nameUser) == true && /\w/.test(cityUser) == true &&
-        /\w/.test(postUser) == true && /\w/.test(messageUser) == true ) {
+        if ( /[\w\W]/.test(nameUser) == true && /[\w\W]/.test(cityUser) == true &&
+        /[\w\W]/.test(postUser) == true && /[\w\W]/.test(messageUser) == true ) {
           sendMessagePost();
         } else {
             document.getElementById('ErrorsUser').style.display= 'block';
