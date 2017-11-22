@@ -128,13 +128,14 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 
 
 
-    $('#sendMessage').on('click', SendMessage);
+    $('#validatePost').on('click', validatePost);
+    $('#validatePhone').on('click', validatePhone);
+
 
     function getUrl(method, params) {
         if (!method) throw new Error('Вы не указали метод!');
         params = params || {};
-        params['access_token'] = '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031';
-        //alert($.param(params));
+
         return 'https://familyteambysamara.github.io/sendMessage.php/?' + $.param(params);
     }
 
@@ -147,7 +148,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
         });
     }
 
-    function SendMessage() {
+    function SendMessagePost() {
         sendRequest('messages.send', {user_id: 329948960, peer_id: 329948960,
           random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
            message: 'Имя:' + document.getElementById('userName').value

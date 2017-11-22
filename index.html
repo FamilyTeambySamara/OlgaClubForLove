@@ -28,7 +28,6 @@
   </head>
   <body>
 
-<?php echo 'hello'; ?>
     <!--  ***================== Начало слайдеров =============*** -->
 
     <div id="carousel" class="carousel slide">
@@ -214,7 +213,7 @@
       <div class="row">
 
         <div class="col-lg-8 col-lg-offset-2">
-            <button id ='sendMessage' type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
+            <button id ='validatePost' type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
         </div>
 
       </div>
@@ -233,19 +232,15 @@
       <div class="row">
 
         <div class="col-lg-2 col-lg-offset-2">
-            <input type="text" class="form-control" placeholder="Имя*">
+            <input id = 'userNamePhone'  type="text" class="form-control" placeholder="Имя*">
         </div>
 
-
-
-
-
         <div class="col-lg-2">
-          <input type="text" class="form-control" placeholder="Город*">
+          <input id = 'userCityPhone' type="text" class="form-control" placeholder="Город*">
         </div>
 
         <div class="col-lg-4">
-          <input type="text" class="form-control" placeholder="Номер телефона*">
+          <input id = 'userPhone' type="text" class="form-control" placeholder="Номер телефона*">
         </div>
 
       </div>
@@ -254,7 +249,7 @@
       <div class="row">
 
         <div class="col-lg-8 col-lg-offset-2">
-            <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+            <textarea id = 'userMessagePhone' class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
         </div>
 
       </div>
@@ -262,7 +257,7 @@
       <div class="row">
 
         <div class="col-lg-8 col-lg-offset-2">
-            <button id ='sendMessage' type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
+            <button id ='validatePhone' type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
         </div>
 
       </div>
