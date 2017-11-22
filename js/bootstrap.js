@@ -137,7 +137,9 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 
         if (/\w/.test(nameUser) == false) {
           document.getElementById('userName').style.border= '1px solid red';
-        }
+        } else {
+            document.getElementById('userName').style.border= '1px solid #CCCCCC';
+          }
 
         if (/\w/.test(cityUser) == false) {
           document.getElementById('userCity').style.border= '1px solid red';
