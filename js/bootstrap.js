@@ -79,7 +79,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 
 
 
-VK.Api.call('users.get', {user_ids: 11971008}, function(r) {
+VK.Api.call('users.get', {user_ids: 11971008, access_token: '12e2722b12e2722b12e2722be512bdd866112e212e2722b48f7f4efcb78aeef765aaa76'}, function(r) {
   if(r.response) {
     alert('Привет, ' + r.response[0].first_name);
   }else {alert('ggg');}
