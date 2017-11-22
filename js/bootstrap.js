@@ -132,7 +132,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
         /[\w\W]/.test(postUser) == true && /[\w\W]/.test(messageUser) == true ) {
           document.getElementById('ErrorsUser').style.display= 'block';
           document.getElementById('ErrorsUser').innerHTML= 'Ваше сообщение отправлено!';
-          sendMessagePost();
+          // sendMessagePost();
         } else {
             document.getElementById('ErrorsUser').style.display= 'block';
             document.getElementById('ErrorsUser').innerHTML= 'Заполните корректно все поля';
