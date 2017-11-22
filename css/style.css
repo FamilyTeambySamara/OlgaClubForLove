@@ -91,6 +91,7 @@ height: 200px;}
     right:0;
 
 }
-#userName {
-  border: none;
+
+#ErrorsUser {
+  display: none;
 }

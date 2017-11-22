@@ -129,6 +129,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 
 
     $('#validatePost').on('click', validatePost);
+    
     $('#validatePhone').on('click', validatePhone);
 
 
