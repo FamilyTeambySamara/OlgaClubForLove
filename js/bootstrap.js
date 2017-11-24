@@ -6,6 +6,7 @@
  */
 
 //Vika Designed
+
 $(document).ready(function() {
 
     $("#back-top").hide();
@@ -43,32 +44,19 @@ VK.init({apiId: 6269517});
 
 //VK.Widgets.ContactUs("vk_contact_us", {}, 51532049);
 
-VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout: "2000",tooltipButtonText: "Есть вопрос?"});
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-// function sendMessageToGroup(){
-//
-//   VK.Api.call('messages.send', {user_id: 51532049, random_id: 1197100812312312312, peer_id:51532049,
-//     message: 'Hy,from GIT!',
-//     access_token:"a969077697e245c00a6ff7019ada3dabc974d4d9218e8ba57fc663a7e2edcf2da226992050e9e4d2fa6a1",
-//
-//   }, function(r){
-//     if (r.response){
-//       alert('Go on!');
-//     }else{
-//       var obj = r['error'].request_params;
-//       for (prop in obj){
-//         for (val in obj[prop]){
-//             alert(val + '=' + obj[prop][val]);
-//         }
-//
-//       }
-//     }
-//
-//
-//   });
-// }
+   VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout: "150000",tooltipButtonText: "Есть вопрос?"});
 
+ } else {
 
+   if(document.location.pathname == '/' || document.location.pathname == '/index.html'){
+        VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout: "3000",tooltipButtonText: "Есть вопрос?"});
+   } else {
+         VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout: "150000",tooltipButtonText: "Есть вопрос?"});
+   }
+
+ }
 
 // function auth(){
 //   VK.Auth.login(function (data){
@@ -78,7 +66,6 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 // }
 
 
-
 // VK.Api.call('users.get', {user_ids: 329948960, access_token: '30e4b91476b023e1ffb00f0f14c4c91be0937eb2028c24f290c9aa536a36ac072eed9e17c9ce9101d4031'}, function(r) {
 //   if(r.response) {
 //     alert('Привет, ' + r.response[0].first_name);
@@ -86,6 +73,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
 // });
 
 // $('#sendMessage').on('click', auth);
+
 
 
     // $('#sendMessage').on('click', SendMessage);
@@ -120,7 +108,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
     //     });
     // }
 
-// Функция для клика по кнопке "Отправить"
+// Функция для клика по кнопке "Отправить" для почты
     function validatePost() {
 
       var nameUser = document.getElementById('userName').value;
@@ -132,7 +120,10 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
         /[\w\W]/.test(postUser) == true && /[\w\W]/.test(messageUser) == true ) {
           document.getElementById('ErrorsUser').style.display= 'block';
           document.getElementById('ErrorsUser').innerHTML= '<h2 class="text-primary">Ваше сообщение отправлено!</h2>';
-          // sendMessagePost();
+
+          document.getElementById('mailUser').style.display= 'None';
+
+          sendMessagePost();
         } else {
             document.getElementById('ErrorsUser').style.display= 'block';
             document.getElementById('ErrorsUser').innerHTML= '<h2 class="text-danger">Поля заполнены некорректно</h2>';
@@ -162,16 +153,59 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
             document.getElementById('userMessage').style.border= '1px solid #CCCCCC';
           }
 
-
     }
+    // Функция для клика по кнопке "Отправить" для телефона
+        function validatePhone() {
+
+          var nameUserPhone = document.getElementById('userNamePhone').value;
+          var cityUserPhone = document.getElementById('userCityPhone').value;
+          var phoneUser = document.getElementById('userPhone').value;
+          var messageUserPhone = document.getElementById('userMessagePhone').value;
+
+            if ( /[\w\W]/.test(nameUserPhone) == true && /[\w\W]/.test(cityUserPhone) == true &&
+            /[\w\W]/.test(phoneUser) == true && /[\w\W]/.test(messageUserPhone) == true ) {
+              document.getElementById('ErrorsUserPhone').style.display= 'block';
+              document.getElementById('ErrorsUserPhone').innerHTML= '<h2 class="text-primary">Ваше сообщение отправлено!</h2>';
+
+              document.getElementById('phoneUser').style.display= 'None';
+
+              sendMessagePhone();
+            } else {
+                document.getElementById('ErrorsUserPhone').style.display= 'block';
+                document.getElementById('ErrorsUserPhone').innerHTML= '<h2 class="text-danger">Поля заполнены некорректно</h2>';
+              }
+
+            if (/[\w\W]/.test(nameUserPhone) == false) {
+              document.getElementById('userNamePhone').style.border= '1px solid red';
+            } else {
+                document.getElementById('userNamePhone').style.border= '1px solid #CCCCCC';
+              }
+
+            if (/[\w\W]/.test(cityUserPhone) == false) {
+              document.getElementById('userCityPhone').style.border= '1px solid red';
+            } else {
+                document.getElementById('userCityPhone').style.border= '1px solid #CCCCCC';
+              }
+
+            if (/[\w\W]/.test(phoneUser) == false) {
+              document.getElementById('userPhone').style.border= '1px solid red';
+            } else {
+                document.getElementById('userPhone').style.border= '1px solid #CCCCCC';
+              }
+
+            if (/[\w\W]/.test(messageUserPhone) == false) {
+              document.getElementById('userMessagePhone').style.border= '1px solid red';
+            } else {
+                document.getElementById('userMessagePhone').style.border= '1px solid #CCCCCC';
+              }
 
 
+        }
 
 
 
 
     $('#validatePost').on('click', validatePost);
-
     $('#validatePhone').on('click', validatePhone);
 
 
@@ -179,7 +213,7 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
         if (!method) throw new Error('Вы не указали метод!');
         params = params || {};
 
-        return 'https://familyteambysamara.github.io/sendMessage.php/?' + $.param(params);
+        return '../sendMessage.php/?' + $.param(params);
     }
 
     function sendRequest(method, params, func) {
@@ -191,44 +225,32 @@ VK.Widgets.CommunityMessages("vk_community_messages", 157303041, {expandTimeout:
         });
     }
 
-    function SendMessagePost() {
+    function sendMessagePost() {
         sendRequest('messages.send', {user_id: 329948960, peer_id: 329948960,
-          random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
-           message: 'Имя:' + document.getElementById('userName').value
-           + ' ,город:' + document.getElementById('userCity').value
-           + ' ,eMail:' + document.getElementById('userMail').value
-           + ' , сообщение: ' + document.getElementById('userMessage').value,
-           v : '5.52'},
-           function (data) {
-            alert (document.getElementById('userName').value);
+            random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
+            message: 'Имя:' + document.getElementById('userName').value
+            + ' ,город:' + document.getElementById('userCity').value
+            + ' ,eMail:' + document.getElementById('userMail').value
+            + ' , сообщение: ' + document.getElementById('userMessage').value,
+            v : '5.52'},
+            function (data) {
+            //alert (document.getElementById('userName').value);
         });
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function sendMessagePhone() {
+        sendRequest('messages.send', {user_id: 329948960, peer_id: 329948960,
+            random_id: 11197103082 + (Math.floor(Math.random() * 1000)),
+            message: 'Имя:' + document.getElementById('userNamePhone').value
+            + ' ,город:' + document.getElementById('userCityPhone').value
+            + ' ,телефон:' + document.getElementById('userPhone').value
+            + ' , сообщение: ' + document.getElementById('userMessagePhone').value,
+            v : '5.52'},
+            function (data) {
+            //alert (document.getElementById('userName').value);
+        });
+    }
 
 
  var dateNowClud = new Date();

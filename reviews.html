@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "description" content = "Клуб знакомств “Счастливый случай” - это место для людей ищущих свою вторую половинку.">
+    <meta name = "keywords" content = "клуб знакомств, клуб, клуб знакомств Жигулевск, клуб знакомств Самарская область,
+    знакомство, Жигулевск, встречи, встречи Жигулевск, познакомиться с мужчиной, познакомиться с женщиной,
+    познакомиться с мужчиной Жигулевск, познакомиться с женщиной Жигулевск,
+    Счастливый случай, случай, счастье, брак, замужество, выйти замуж Жигулевск,
+    хочу замуж">
+    <meta name = "author" content = "Ilay and Vikkki Tsyman">
     <!-- Выше 3 Мета-теги ** должны прийти в первую очередь в голове; любой другой руководитель контент *после* эти теги -->
     <title>Отзывы</title>
 
@@ -178,7 +186,7 @@
 
             </div>
 
-            <div class="col-lg-2 contactUser
+            <a href="https://vk.com/schastliviisluchai" target="_blank"><div class="col-lg-2 contactUser
             col-md-2
             col-sm-12
             col-xs-12"
@@ -190,7 +198,7 @@
               <h5 class="text-center">
                 Социальные сети </h5>
 
-            </div>
+            </div></a>
 
           </div>
           </div>
@@ -200,18 +208,27 @@
           <div class="container" id="mailUser">
             <h4 class="text-center">Оставьте свои данные, чтобы мы могли с Вами связаться</h4>
             <br>
+
+            <div class="row text-center" id="ErrorsUser">
+
+              <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="text-danger">Заполните корректно все поля</h2>
+              </div>
+              <br>
+            </div>
+            <br>
             <div class="row">
 
               <div class="col-lg-2 col-lg-offset-2">
-                  <input type="text" class="form-control" placeholder="Имя*">
+                  <input id = "userName" type="text" class="form-control" placeholder="Имя*">
               </div>
 
               <div class="col-lg-2">
-                <input type="text" class="form-control" placeholder="Город*">
+                <input id = "userCity" type="text" class="form-control" placeholder="Город*">
               </div>
 
               <div class="col-lg-4">
-                <input type="text" class="form-control" placeholder="E-mail*">
+                <input id = 'userMail' type="text" class="form-control" placeholder="E-mail*">
               </div>
 
             </div>
@@ -220,7 +237,7 @@
             <div class="row">
 
               <div class="col-lg-8 col-lg-offset-2">
-                  <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+                  <textarea id = 'userMessage' class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
               </div>
 
             </div>
@@ -228,7 +245,7 @@
             <div class="row">
 
               <div class="col-lg-8 col-lg-offset-2">
-                  <button type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
+                  <button id ='validatePost' type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
               </div>
 
             </div>
@@ -247,19 +264,15 @@
             <div class="row">
 
               <div class="col-lg-2 col-lg-offset-2">
-                  <input type="text" class="form-control" placeholder="Имя*">
+                  <input id = 'userNamePhone'  type="text" class="form-control" placeholder="Имя*">
               </div>
 
-
-
-
-
               <div class="col-lg-2">
-                <input type="text" class="form-control" placeholder="Город*">
+                <input id = 'userCityPhone' type="text" class="form-control" placeholder="Город*">
               </div>
 
               <div class="col-lg-4">
-                <input type="text" class="form-control" placeholder="Номер телефона*">
+                <input id = 'userPhone' type="text" class="form-control" placeholder="Номер телефона*">
               </div>
 
             </div>
@@ -268,7 +281,7 @@
             <div class="row">
 
               <div class="col-lg-8 col-lg-offset-2">
-                  <textarea class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
+                  <textarea id = 'userMessagePhone' class="form-control" rows="3" placeholder="Введите ваше сообшение"></textarea>
               </div>
 
             </div>
@@ -276,13 +289,12 @@
             <div class="row">
 
               <div class="col-lg-8 col-lg-offset-2">
-                  <button type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
+                  <button id ='validatePhone' type="button" class="btn btn-primary btn-lg center-block ">Отправить</button>
               </div>
 
             </div>
               <br>
           </div>
-
           <!-- Начало форм с связи с ВК -->
           <!-- <div class="container" id="vkUser">
             <h4 class="text-center"><a href='#' onclick='sendMessageToGroup()'>Перейдите в ВК</a></h4>
@@ -330,6 +342,17 @@
       <p id="copyright" class="text-center">© 2017 Клуб знакомств "Счастливый случай"</p>
   </div>
   </div>
+
+  <div id="vk_contact_us"></div>
+  <div id="vk_community_messages"></div>
+<!-- Начало ролика "Вверх" -->
+<div id="back-top">
+  <a href="#top" class="arrow img-circle" title="Вверх">
+    <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+    <span class="img-circle">
+      <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+    </span>
+  </a></div>
 
     <!-- на jQuery (необходим для Bootstrap - х JavaScript плагины) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -92,6 +92,11 @@ height: 200px;}
 
 }
 
-#ErrorsUser {
+#ErrorsUser, #ErrorsUserPhone {
   display: none;
+}
+
+/*Стили для ссылки социальные сети*/
+#referKontaktUser {
+  color: #333333;
 }
